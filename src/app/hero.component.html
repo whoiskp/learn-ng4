@@ -1,8 +1,15 @@
 <div class="container padding">
     <h1>{{ title }}</h1>
+    <div>
+        <label>Hero name:</label> <input #heroName />
+        <button (click)="add(heroName.value); heroName.value=''">
+          Add
+        </button>
+    </div>
     <ul class="heroes">
         <li *ngFor="let hero of heroes; let i = index" (click)="onSelect(hero)" [class.selected]="hero === selectedHero">
             <span class="badge">{{hero.id}}</span>{{i + 1}} {{hero.name}}
+            <button class="btn btn-danger" (click)="delete(hero); $event.stopPropagation()">-</button>
         </li>
     </ul>
     <div *ngIf="selectedHero">
