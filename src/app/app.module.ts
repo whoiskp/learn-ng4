@@ -11,6 +11,10 @@ import { HeroComponent } from './hero.component';
 import { HeroDetailComponent } from './hero-detail.component';
 import { DashboardComponent } from './dashboard.component';
 import { HeroService } from './hero.service';
+import { HeroSearchComponent } from './hero-search.component';
+import { HeroBirthdayComponent } from './hero-birthday.component';
+
+import { ExponentialStrength } from './pipes/exponential-strength.pipe';
 
 import { AppRoutingModule } from './app.routing';
 
@@ -19,7 +23,10 @@ import { AppRoutingModule } from './app.routing';
     AppComponent,
     HeroComponent,
     HeroDetailComponent,
-    DashboardComponent
+    DashboardComponent,
+    HeroSearchComponent,
+    HeroBirthdayComponent,
+    ExponentialStrength
   ],
   imports: [
     BrowserModule, FormsModule, AppRoutingModule, HttpModule,

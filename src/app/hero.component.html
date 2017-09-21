@@ -6,6 +6,7 @@
           Add
         </button>
     </div>
+    <hero-search></hero-search>
     <ul class="heroes">
         <li *ngFor="let hero of heroes; let i = index" (click)="onSelect(hero)" [class.selected]="hero === selectedHero">
             <span class="badge">{{hero.id}}</span>{{i + 1}} {{hero.name}}
